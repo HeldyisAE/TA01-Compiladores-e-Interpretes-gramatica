@@ -5,6 +5,7 @@
 -------------------- Terminales --------------------
 
 Palabras reservadas:
+    "main"
     "val"
     "if"
     "elif"
@@ -12,7 +13,6 @@ Palabras reservadas:
     "for"
     "return"
     "break"
-    "main"
     "write"
     "read"
     "int"
@@ -29,8 +29,8 @@ Operadores aritmeticos:
         "*"
         "/"
         "//"
-        "mod" 
-        "pot"
+        "mod" (Modulo)
+        "pot" (Potencia)
 
     Unarios:
         "-"
@@ -45,18 +45,23 @@ Operadores relacionales:
     "=="
 
 Operadores logicos:
-    "λ"
-    "θ"
-    "Σ"   
+    "λ" (and)
+    "θ" (or)
+    "Σ" (not)
     
 Delimitadores:
-    Expresiones Logicas:
-        "є:"
-        ":э"
-
-    Expresiones relacionales: 
-        "ʃ:"
-        ":ʅ"
+    "¿:" (Abre bloque)
+    "?:" (Cierra bloque)
+    "є:" (Abre parentesis)
+    ":э" (Cierra parentesis)
+    "ʃ:" (Inicia corchetes)
+    ":ʅ" (Cierra corchetes)
+    "»" (Cierra expresion)
+    "Ͱ" (Asignacion)
+    "|" (Comentario de linea)
+    "¡" (Abre comentario multilinea)
+    "!" (Cierra comentario multilinea)
+    "," (Separador para parametros de funcion)
 
 ------------------- No Terminales ------------------
 
