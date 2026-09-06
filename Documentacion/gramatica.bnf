@@ -1,6 +1,62 @@
 ------------------ Simbolo inicial -----------------
 
+<programa>
+
 -------------------- Terminales --------------------
+
+Palabras reservadas:
+    "val"
+    "if"
+    "elif"
+    "while"
+    "for"
+    "return"
+    "break"
+    "main"
+    "write"
+    "read"
+    "int"
+    "float"
+    "boolean"
+    "char"
+    "string"
+    "void"
+
+Operadores aritmeticos:
+    Binarios:
+        "+"
+        "-"
+        "*"
+        "/"
+        "//"
+        "mod" 
+        "pot"
+
+    Unarios:
+        "-"
+        "++"
+        "--"
+
+Operadores relacionales:
+    "<"
+    ">"
+    "<="
+    ">="
+    "=="
+
+Operadores logicos:
+    "λ"
+    "θ"
+    "Σ"   
+    
+Delimitadores:
+    Expresiones Logicas:
+        "є:"
+        ":э"
+
+    Expresiones relacionales: 
+        "ʃ:"
+        ":ʅ"
 
 ------------------- No Terminales ------------------
 
