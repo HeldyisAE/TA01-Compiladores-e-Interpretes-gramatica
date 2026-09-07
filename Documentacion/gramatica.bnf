@@ -9,6 +9,7 @@ Palabras reservadas:
     "val"
     "if"
     "elif"
+    "else"
     "while"
     "for"
     "return"
@@ -43,15 +44,16 @@ Operadores relacionales:
     "<="
     ">="
     "=="
+    "!="
 
 Operadores logicos:
     "λ" (and)
     "θ" (or)
     "Σ" (not)
     
-Delimitadores:
+Delimitadores y simbolos literales:
     "¿:" (Abre bloque)
-    "?:" (Cierra bloque)
+    ":?" (Cierra bloque)
     "є:" (Abre parentesis)
     ":э" (Cierra parentesis)
     "ʃ:" (Inicia corchetes)
@@ -62,6 +64,7 @@ Delimitadores:
     "¡" (Abre comentario multilinea)
     "!" (Cierra comentario multilinea)
     "," (Separador para parametros de funcion)
+    "." (Punto decimal)
 
 ------------------- No Terminales ------------------
 
