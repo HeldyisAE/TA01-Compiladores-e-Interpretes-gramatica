@@ -20,6 +20,8 @@ Palabras reservadas:
 
         "true"         (Valor booleano verdadero)
         "false"        (Valor booleano falso)
+        "dg"            (variable global)
+        "dl"            (variable local)
 
     Estructuras condicionales:
         "if"           (Condicional)
@@ -52,12 +54,12 @@ Operadores aritmeticos:
         "--" (Decremento)
 
 Operadores relacionales:
-    "<:"   (Menor que)
-    ":>"   (mayor que)
-    "<<="  (Menor o igual que)
-    ">>=" (Mayor o igual que)
-    "===" (Igualdad)
-    "=/=" (Diferencia)
+    "<"   (Menor que)
+    ">"   (mayor que)
+    "<="  (Menor o igual que)
+    ">=" (Mayor o igual que)
+    "==" (Igualdad)
+    "!=" (Diferencia)
 
 Operadores logicos:
     "λ" (and)
@@ -103,6 +105,8 @@ Caracteres y texto:
     <digito_no_cero>                
     <lista_digitos>                 
     <texto>                        
+    <caracter>                
+    <simbolo>
 
 Literales y tipos:
     <entero>                       
@@ -110,10 +114,10 @@ Literales y tipos:
     <exponencial>          
     <fraccion>             (Parte decimal)
     <bool>                    (true o false)
-    <cadena>                  (Cadena de texto)
-    <caracter>                
-    <simbolo>
-    <valor_numerico>           (Entero o decimal)
+    <lista_digitos_no_cero_final> 
+    <cadena_texto>                  (Cadena de texto incluyendo sus delimitadores.)
+    <caracter_literal> 
+    <valor_numerico>           (Entero o decimal o exponencial )
     <valor>                   (Valor usado en una expresion)
     <tipo>                    (Tipo de dato)
     <tipo_funcion>            (Tipo que retorna una funcion)
@@ -123,15 +127,46 @@ Identificadores:
     <identificador>          (Nombre de una variable o funcion)
     <resto_id>               (Letras o numeros restantes del identificador)
 
+
 Delimitadores:
     <abrir_bloque>                  
     <cerrar_bloque>                
     <fin_sentencia>                 (Final de una expresion es como el ;)
-    <separa_parametros>     
+    <coma>    
     <abrir_parentesis>           
     <cerrar_parentesis>           
     <abrir_corcheteCuadrados>      (Abre un indice)
     <cerrar_corcheteCuadrados>      (Cierra un indice)
+    <punto>
+    <incremento>
+    <decremento>
+
+Variables:
+    <variable>                     
+    <def_var_variable>          (Creacion de una variable con val)
+    <def_var_global>
+    <def_var_local> 
+    <asignacion_variable>
+    <variable_numerica>
+
+Entrada y salida:
+    <lectura>                (Entrada de datos mediante read)
+    <escritura>              (Salida de datos mediante write)
+
+Arreglos:
+    <indice> 
+    <arreglo>   
+    <acceso_arreglo>                  (Arreglo de una dimension)
+    <creacion_arreglo>
+    <declaracion_arreglo>
+    <modificacion_arreglo>
+    <tipo_arreglo> 
+    <lista_valores_arreglo> 
+
+Comentarios:
+    <comentario_linea>
+    <comentario_multilinea>
+    <comentario>
 
 Operaciones matematicas:
     <valor_matematico>            
@@ -151,28 +186,11 @@ Expresiones y funciones:
     <lista_expresiones>             
     <llamada_funcion>             
 
-Variables:
-    <variable>                     
-    <declaracion_variable>          (Creacion de una variable con val)
-    <declaracion_global>         
-    <declaracion_local>           
-    <asignacion_variable>          
 
-Arreglos:
-    <arreglo>                    (Arreglo de una dimension)
-    <declaracion_arreglo>          
-    <creacion_arreglo>              
-    <acceso_arreglo>               
-    <modificacion_arreglo>       
-    <indice>                       
-
-Entrada y salida:
-    <lectura>                (Entrada de datos mediante read)
-    <escritura>              (Salida de datos mediante write)
 
 Estructuras de control
     <estructura_control>        (Estructura que controla el flujo del programa)
-    <if>                           --
+    <if>                        
     <elif>                          
     <else>                           
     <while>                          
@@ -196,60 +214,121 @@ Parametros y funciones:
 
 
 ------------------- Producciones -------------------
+Caracteres y texto: 
+    <letra> ::= [a-zA-Z]
 
-<letra> ::= [a-zA-Z]
+    <digito> ::= [0-9]
 
-<digito> ::= [0-9]
+    <digito_no_cero> ::= [1-9]
 
-<digito_no_cero> ::= [1-9]
+    <lista_digitos> ::= <digito> | <digito> <lista_digitos>
 
-<lista_digitos> ::= <digito> | <digito> <lista_digitos>
+    <caracter>::= <letra> | <digito> | <simbolo>
 
-<entero> ::= "0" | <digito_no_cero> <lista_digitos>
+    <texto> ::= <caracter> | <caracter> <texto>
 
-<fraccion> ::= "." <lista_digitos>
+    <simbolo> ::=   "\@" | "\#" | "\$" | "\%"  | "\^" | "\&" | "\*" | "\(" | "\)" | "\-" | "\_" | "\=" | "\+"  | "\[" | "\]" | "\{" | "\}" | "\;" | "\:" | "\'" | "\<" | "\>"  | "\," | "\." | "\/" | "\?"  | "\\" | "\`" | "\~"
 
-<exponencial> ::= <entero> "e" <entero>  | <entero> "E" <entero>
 
-<lista_digitos_no_cero_final> ::= <digito_no_cero>  | <digito> <lista_digitos_no_cero_final>
+Literales y tipos:
+    <entero> ::= "0" | <digito_no_cero> <lista_digitos>
 
-<flotante> ::= "0" "." <lista_digitos_no_cero_final>   | <digito_no_cero> <lista_digitos> "." <lista_digitos_no_cero_final>
+    <flotante> ::= "0" "\." "0"|"0" "\." <lista_digitos_no_cero_final>   | <digito_no_cero> <lista_digitos> "\." <lista_digitos_no_cero_final>
 
-<bool> ::= "true" | "false"
+    <lista_digitos_no_cero_final> ::= <digito_no_cero>  | <digito> <lista_digitos_no_cero_final>
 
-<simbolo> ::= " " | "!" | "@" | "#" | "$" | "%"  | "^" | "&" | "*" | "(" | ")" | "-" | "_" | "=" | "+"  | "[" | "]" | "{" | "}" | ";" | ":" | "'" | "<" | ">"  | "," | "." | "/" | "?" | "|" | "\\" | "`" | "~"
+    <exponencial> ::= <entero> "e" <entero>  | <entero> "E" <entero>
 
-<caracter>::= <letra> | <digito> | <simbolo>
+    <fraccion> ::= "\." <lista_digitos>
 
-<tipo> ::= "int" | "float" | "bool" | "char" | "string"
+    <bool> ::= "true" | "false"
 
-<tipo_funcion> ::= "int" | "float" | "bool" | "char"
+    <cadena_texto> ::= "\"" <texto> "\""
 
-<negativo> ::= "-" <entero> | "-" <flotante>
+    <caracter_literal> "\'" <caracter> "\'"
 
-<identificador> ::= <letra> | <letra> <resto_id>
+    <valor_numerico> ::= <entero> | <flotante> 
 
-<resto_id> ::= <letra> | <digito>  | <letra> <resto_id>  | <digito> <resto_id>| "_" <letra> | "_" <digito> | "_" <letra> <resto_id>  | "_" <digito> <resto_id>
+    <valor> ::= <valor_numerico> |<exponencial>| <bool> | <caracter> | <cadena_texto>  | <identificador> | <caracter_literal>
+    
+    <tipo> ::= "int" | "float" | "bool" | "char" | "string"
 
-<abrir_bloque> ::= "¿:"
+    <tipo_funcion> ::= "int" | "float" | "bool" | "char"
 
-<cerrar_bloque> ::= ":?"
+    <negativo> ::= "\-" <entero> | "\-" <flotante>
 
-<fin_sentencia> ::= "»"
 
-<separa_parametros> ::= ","
+Identificadores:
+    <identificador> ::= <letra> | <letra> <resto_id>
 
-<abrir_parentesis> ::= "є:"
+    <resto_id> ::= <letra> | <digito>  | <letra> <resto_id>  | <digito> <resto_id>| "\_" <letra> | "\_" <digito> | "\_" <letra> <resto_id>  | "\_" <digito> <resto_id>
 
-<cerrar_parentesis> ::= ":э"
 
-<abrir_corcheteCuadrados> ::= "ʃ:"
+Delimitadores:
+    <abrir_bloque> ::= "¿:"
 
-<cerrar_corcheteCuadrados> ::= ":ʅ"
+    <cerrar_bloque> ::= ":?"
 
-<incremento> ::= <variable> "++"
+    <fin_sentencia> ::= "»"
 
-<decremento> ::= <variable> "--"
+    <coma> ::= "\,"
 
-<valor_numerico> ::= <entero> | <flotante> | <exponencial>
+    <abrir_parentesis> ::= "є:"
 
+    <cerrar_parentesis> ::= ":э"
+
+    <abrir_corcheteCuadrados> ::= "ʃ:"
+
+    <cerrar_corcheteCuadrados> ::= ":ʅ"
+
+    <punto>::= "\."
+
+    <incremento> ::= <variable_numerica> "++"
+
+    <decremento> ::= <variable_numerica> "--"
+
+
+Variables:
+    <variable> ::= <identificador>
+
+    <def_variable> ::=  "val" <tipo> <identificador> "Ͱ" <valor> "»"
+
+    <def_var_global> ::= "dg" <def_variable> 
+
+    <def_var_local> ::= "dl" <def_variable> 
+
+    <asignacion_variable> ::= <variable> "Ͱ" <valor> "»"
+
+    <variable_numerica> ::= <variable> 
+
+Entrada y salida:
+
+    <lectura> ::= "read" <variable> "»"
+
+    <escritura> ::= "write" <valor> "»"
+
+    <valor_escritura> ::= <entero>   | <flotante> | <bool>   | <cadena_texto> | <variable>
+
+Arreglos:
+    <indice> ::= <entero> 
+
+    <arreglo> ::= <identificador>
+
+    <acceso_arreglo> ::= <arreglo> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados>
+
+    <creacion_arreglo> ::= "val" <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> "Ͱ" <lista_valores_arreglo> "»"
+
+    <declaracion_arreglo> ::= <creacion_arreglo>
+
+    <modificacion_arreglo> ::= <acceso_arreglo> "Ͱ" <valor_numerico> "»"
+
+    <tipo_arreglo> ::= "int" | "float"
+
+    <lista_valores_arreglo> ::= <valor_numerico> | <valor_numerico> "," <lista_valores_arreglo>
+
+Comentarios:
+    <comentario_linea> ::= "|" <texto>
+
+    <comentario_multilinea> ::= "¡" <texto> "!"
+
+    <comentario> ::= <comentario_linea> | <comentario_multilinea>
