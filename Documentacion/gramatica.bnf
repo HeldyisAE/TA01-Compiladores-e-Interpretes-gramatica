@@ -199,9 +199,9 @@ Parametros y funciones:
 
 <letra> ::= [a-zA-Z]
 
-<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<digito> ::= [0-9]
 
-<digito_no_cero> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<digito_no_cero> ::= [1-9]
 
 <lista_digitos> ::= <digito> | <digito> <lista_digitos>
 
