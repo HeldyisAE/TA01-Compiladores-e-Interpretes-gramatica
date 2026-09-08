@@ -10,7 +10,7 @@ Como parte del curso de Compiladores e interpretes se requiere la redacción y p
 
 - Estudiantes:
     Heldyis Agüero Espinoza [2023296812]
-    Alice Arias Salazar [ *Carnet* ]
+    Alice Arias Salazar [2023104639]
   
 - Tarea o1
 
