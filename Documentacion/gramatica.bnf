@@ -111,7 +111,8 @@ Literales y tipos:
     <fraccion>             (Parte decimal)
     <bool>                    (true o false)
     <cadena>                  (Cadena de texto)
-    <caracter>                     
+    <caracter>                
+    <simbolo>
     <valor_numerico>           (Entero o decimal)
     <valor>                   (Valor usado en una expresion)
     <tipo>                    (Tipo de dato)
@@ -195,3 +196,60 @@ Parametros y funciones:
 
 
 ------------------- Producciones -------------------
+
+<letra> ::= [a-zA-Z]
+
+<digito> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<digito_no_cero> ::= "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+
+<lista_digitos> ::= <digito> | <digito> <lista_digitos>
+
+<entero> ::= "0" | <digito_no_cero> <lista_digitos>
+
+<fraccion> ::= "." <lista_digitos>
+
+<exponencial> ::= <entero> "e" <entero>  | <entero> "E" <entero>
+
+<lista_digitos_no_cero_final> ::= <digito_no_cero>  | <digito> <lista_digitos_no_cero_final>
+
+<flotante> ::= "0" "." <lista_digitos_no_cero_final>   | <digito_no_cero> <lista_digitos> "." <lista_digitos_no_cero_final>
+
+<bool> ::= "true" | "false"
+
+<simbolo> ::= " " | "!" | "@" | "#" | "$" | "%"  | "^" | "&" | "*" | "(" | ")" | "-" | "_" | "=" | "+"  | "[" | "]" | "{" | "}" | ";" | ":" | "'" | "<" | ">"  | "," | "." | "/" | "?" | "|" | "\\" | "`" | "~"
+
+<caracter>::= <letra> | <digito> | <simbolo>
+
+<tipo> ::= "int" | "float" | "bool" | "char" | "string"
+
+<tipo_funcion> ::= "int" | "float" | "bool" | "char"
+
+<negativo> ::= "-" <entero> | "-" <flotante>
+
+<identificador> ::= <letra> | <letra> <resto_id>
+
+<resto_id> ::= <letra> | <digito>  | <letra> <resto_id>  | <digito> <resto_id>| "_" <letra> | "_" <digito> | "_" <letra> <resto_id>  | "_" <digito> <resto_id>
+
+<abrir_bloque> ::= "¿:"
+
+<cerrar_bloque> ::= ":?"
+
+<fin_sentencia> ::= "»"
+
+<separa_parametros> ::= ","
+
+<abrir_parentesis> ::= "є:"
+
+<cerrar_parentesis> ::= ":э"
+
+<abrir_corcheteCuadrados> ::= "ʃ:"
+
+<cerrar_corcheteCuadrados> ::= ":ʅ"
+
+<incremento> ::= <variable> "++"
+
+<decremento> ::= <variable> "--"
+
+<valor_numerico> ::= <entero> | <flotante> | <exponencial>
+
