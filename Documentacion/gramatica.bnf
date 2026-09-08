@@ -5,46 +5,59 @@
 -------------------- Terminales --------------------
 
 Palabras reservadas:
-    "main"
-    "val"
-    "if"
-    "elif"
-    "else"
-    "while"
-    "for"
-    "return"
-    "break"
-    "write"
-    "read"
-    "int"
-    "float"
-    "boolean"
-    "char"
-    "string"
-    "void"
+
+    Procedimiento principal:
+        "principal"    (Procedimiento inicial del programa)
+
+    Variables y tipos de datos:
+        "val"          (Creacion de variables)
+        "int"          (Tipo entero)
+        "float"        (Tipo flotante o decimal)
+        "bool"         (Tipo booleano)
+        "char"         (Tipo caracter)
+        "string"       (Tipo cadena)
+        "void"         (Tipo sin valor de retorno)
+
+        "true"         (Valor booleano verdadero)
+        "false"        (Valor booleano falso)
+
+    Estructuras condicionales:
+        "if"           (Condicional)
+        "elif"         (Condicional alternativa)
+        "else"         (Condicion por defecto)
+
+    Ciclo y control de funciones:
+        "while"        (Ciclo mientras)
+        "for"          (Ciclo para)
+        "return"       (Retorno de una funcion)
+        "break"        (Interrupcion de un ciclo)
+
+    Entrada y salida de datos
+        "read"         (Lectura o entrada de datos)
+        "write"        (Escritura o salida de datos)
 
 Operadores aritmeticos:
     Binarios:
-        "+"
-        "-"
-        "*"
-        "/"
-        "//"
+        "+"   (Suma)
+        "-"   (Resta)
+        "*"   (Multiplicacion)
+        "/"   (Division)
+        "//"  (Division entera)
         "mod" (Modulo)
         "pot" (Potencia)
 
     Unarios:
-        "-"
-        "++"
-        "--"
+        "-"  (Negacion)
+        "++" (Incremento)
+        "--" (Decremento)
 
 Operadores relacionales:
-    "<"
-    ">"
-    "<="
-    ">="
-    "=="
-    "!="
+    "<:"   (Menor que)
+    ":>"   (mayor que)
+    "<<="  (Menor o igual que)
+    ">>=" (Mayor o igual que)
+    "===" (Igualdad)
+    "=/=" (Diferencia)
 
 Operadores logicos:
     "λ" (and)
@@ -52,20 +65,133 @@ Operadores logicos:
     "Σ" (not)
     
 Delimitadores y simbolos literales:
+    Bloques:
     "¿:" (Abre bloque)
     ":?" (Cierra bloque)
+
+    Parentesis:
     "є:" (Abre parentesis)
     ":э" (Cierra parentesis)
-    "ʃ:" (Inicia corchetes)
-    ":ʅ" (Cierra corchetes)
-    "»" (Cierra expresion)
-    "Ͱ" (Asignacion)
+
+    Indices de arreglos:
+    "ʃ:" (Inicia indice)
+    ":ʅ" (Cierra indice)
+
+    "»"  (Final de expresion)
+    "Ͱ"  (Asignacion)
+    ","  (Separador para parametros de funcion)
+    "."  (Punto decimal)
+
+Comentarios
     "|" (Comentario de linea)
     "¡" (Abre comentario multilinea)
     "!" (Cierra comentario multilinea)
-    "," (Separador para parametros de funcion)
-    "." (Punto decimal)
+
+Digitos:
+"0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
+
+Letras:
+"a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m"
+"n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
+"A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M"
+"N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"
 
 ------------------- No Terminales ------------------
+Caracteres y texto: 
+    <letra>                         
+    <digito>                        
+    <digito_no_cero>                
+    <lista_digitos>                 
+    <texto>                        
+
+Literales y tipos:
+    <entero>                       
+    <flotante>                     
+    <exponencial>          
+    <fraccion>             (Parte decimal)
+    <bool>                    (true o false)
+    <cadena>                  (Cadena de texto)
+    <caracter>                     
+    <valor_numerico>           (Entero o decimal)
+    <valor>                   (Valor usado en una expresion)
+    <tipo>                    (Tipo de dato)
+    <tipo_funcion>            (Tipo que retorna una funcion)
+    <negativo>            (Numero negativo solo entero o flotante)
+
+Identificadores:
+    <identificador>          (Nombre de una variable o funcion)
+    <resto_id>               (Letras o numeros restantes del identificador)
+
+Delimitadores:
+    <abrir_bloque>                  
+    <cerrar_bloque>                
+    <fin_sentencia>                 (Final de una expresion es como el ;)
+    <separa_parametros>     
+    <abrir_parentesis>           
+    <cerrar_parentesis>           
+    <abrir_corcheteCuadrados>      (Abre un indice)
+    <cerrar_corcheteCuadrados>      (Cierra un indice)
+
+Operaciones matematicas:
+    <valor_matematico>            
+    <operacion_potencia>        
+    <operacion_matematica>      (Combinacion de valores y operaciones matematicas)
+    <expresion_matematica>       (Operacion matematica completa)
+
+Expresiones logicas:
+    <condicion_basica>              (Una condicion relacional o booleana)
+    <condiciones_and>               (Condiciones unidas con λ)
+    <condiciones_or>                (Condiciones unidas con θ)
+    <negacion>                      (Negacion usando Σ)
+    <expresion_logica>              (Expresion logica completa)
+
+Expresiones y funciones:
+    <expresion>                   
+    <lista_expresiones>             
+    <llamada_funcion>             
+
+Variables:
+    <variable>                     
+    <declaracion_variable>          (Creacion de una variable con val)
+    <declaracion_global>         
+    <declaracion_local>           
+    <asignacion_variable>          
+
+Arreglos:
+    <arreglo>                    (Arreglo de una dimension)
+    <declaracion_arreglo>          
+    <creacion_arreglo>              
+    <acceso_arreglo>               
+    <modificacion_arreglo>       
+    <indice>                       
+
+Entrada y salida:
+    <lectura>                (Entrada de datos mediante read)
+    <escritura>              (Salida de datos mediante write)
+
+Estructuras de control
+    <estructura_control>        (Estructura que controla el flujo del programa)
+    <if>                           --
+    <elif>                          
+    <else>                           
+    <while>                          
+    <for>                           
+
+Sentencias y bloques:
+    <instruccion>                   
+    <lista_instrucciones>           
+    <bloque>                        (Conjunto de instrucciones)
+    <break>                        
+    <return>                      
+    <incremento>                   
+    <decremento>                   
+
+Parametros y funciones:
+    <parametro>                     
+    <lista_parametros>         
+    <funcion>                       (Define una funcion)
+    <lista_funciones>             
+    <principal>                     (Procedimiento principal)
+
 
 ------------------- Producciones -------------------
