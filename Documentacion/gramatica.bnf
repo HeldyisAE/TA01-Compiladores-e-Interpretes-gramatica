@@ -1,16 +1,17 @@
 ------------------ Simbolo inicial -----------------
 
-<programa>
+<main>
 
 -------------------- Terminales --------------------
 
 Palabras reservadas:
 
     Procedimiento principal:
-        "principal"    (Procedimiento inicial del programa)
+        "main"    (Procedimiento inicial del programa)
 
-    Variables y tipos de datos:
+    Variables, funciones y tipos de datos:
         "val"          (Creacion de variables)
+        "defun"        (Creacion de funcion)
         "int"          (Tipo entero)
         "float"        (Tipo flotante o decimal)
         "bool"         (Tipo booleano)
@@ -130,9 +131,7 @@ Identificadores:
 
 Delimitadores:
     <abrir_bloque>                  
-    <cerrar_bloque>                
-    <fin_sentencia>                 (Final de una expresion es como el ;)
-    <coma>    
+    <cerrar_bloque>
     <abrir_parentesis>           
     <cerrar_parentesis>           
     <abrir_corcheteCuadrados>      (Abre un indice)
@@ -168,16 +167,24 @@ Comentarios:
     <comentario_multilinea>
     <comentario>
 
-Operaciones matematicas:
-    <valor_matematico>            
-    <operacion_potencia>        
-    <operacion_matematica>      (Combinacion de valores y operaciones matematicas)
-    <expresion_matematica>       (Operacion matematica completa)
+Operaciones aritmeticas:
+    <valor_aritmetico>            
+    <operacion_potencia>
+    <operacion_suma>
+    <operacion_multiplicacion>
+    <operacion_modulo>
+    <operacion_aritmetica>      (Combinacion de valores y operaciones matematicas)
+    <expresion_aritmetica>       (Operacion matematica completa)
+
+Operaciones relacionales:
+    <operador_relacional>           (Conjunto de operadores relacionales)
+    <operacion_relacional>
 
 Expresiones logicas:
     <condicion_basica>              (Una condicion relacional o booleana)
     <condiciones_and>               (Condiciones unidas con λ)
     <condiciones_or>                (Condiciones unidas con θ)
+    <condiciones_logicas>           (Conjunto de condiciones logicas binarias)
     <negacion>                      (Negacion usando Σ)
     <expresion_logica>              (Expresion logica completa)
 
@@ -185,8 +192,6 @@ Expresiones y funciones:
     <expresion>                   
     <lista_expresiones>             
     <llamada_funcion>             
-
-
 
 Estructuras de control
     <estructura_control>        (Estructura que controla el flujo del programa)
@@ -210,7 +215,7 @@ Parametros y funciones:
     <lista_parametros>         
     <funcion>                       (Define una funcion)
     <lista_funciones>             
-    <principal>                     (Procedimiento principal)
+    <main>                     (Procedimiento principal)
 
 
 ------------------- Producciones -------------------
@@ -245,15 +250,13 @@ Literales y tipos:
 
     <cadena_texto> ::= "\"" <texto> "\""
 
-    <caracter_literal> "\'" <caracter> "\'"
+    <caracter_literal> ::= "\'" <caracter> "\'"
 
     <valor_numerico> ::= <entero> | <flotante> 
 
     <valor> ::= <valor_numerico> |<exponencial>| <bool> | <caracter> | <cadena_texto>  | <identificador> | <caracter_literal>
     
-    <tipo> ::= "int" | "float" | "bool" | "char" | "string"
-
-    <tipo_funcion> ::= "int" | "float" | "bool" | "char"
+    <tipo> ::= "int" | "float" | "bool" | "char" | "string" | "void"
 
     <negativo> ::= "\-" <entero> | "\-" <flotante>
 
@@ -269,10 +272,6 @@ Delimitadores:
 
     <cerrar_bloque> ::= ":?"
 
-    <fin_sentencia> ::= "»"
-
-    <coma> ::= "\,"
-
     <abrir_parentesis> ::= "є:"
 
     <cerrar_parentesis> ::= ":э"
@@ -283,7 +282,7 @@ Delimitadores:
 
     <punto>::= "\."
 
-    <incremento> ::= <variable_numerica> "++"
+    <incremento> ::= <variable_numerica> "++" 
 
     <decremento> ::= <variable_numerica> "--"
 
@@ -291,13 +290,13 @@ Delimitadores:
 Variables:
     <variable> ::= <identificador>
 
-    <def_variable> ::=  "val" <tipo> <identificador> "Ͱ" <valor> "»"
+    <def_variable> ::=  "val" <tipo> <identificador> ("»" | "Ͱ" <expresion> "»")
 
     <def_var_global> ::= "dg" <def_variable> 
 
     <def_var_local> ::= "dl" <def_variable> 
 
-    <asignacion_variable> ::= <variable> "Ͱ" <valor> "»"
+    <asignacion_variable> ::= <variable> "Ͱ" <expresion> "»"
 
     <variable_numerica> ::= <variable> 
 
@@ -316,7 +315,7 @@ Arreglos:
 
     <acceso_arreglo> ::= <arreglo> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados>
 
-    <creacion_arreglo> ::= "val" <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> "Ͱ" <lista_valores_arreglo> "»"
+    <creacion_arreglo> ::= "val" <tipo_arreglo> <identificador> <abrir_bloque> <indice> <cerrar_bloque> "Ͱ" <lista_valores_arreglo> "»"
 
     <declaracion_arreglo> ::= <creacion_arreglo>
 
@@ -332,3 +331,87 @@ Comentarios:
     <comentario_multilinea> ::= "¡" <texto> "!"
 
     <comentario> ::= <comentario_linea> | <comentario_multilinea>
+
+Operaciones aritmeticas:
+    <valor_aritmetico> ::= <valor_numerico> | <negativo> | <identificador> | <acceso_arreglo> | <llamada_funcion> | <abrir_parentesis> <expresion_aritmetica> <cerrar_parentesis>
+
+    <operacion_potencia> ::= <valor_aritmetico> "pot" <valor_aritmetico>
+
+    <operacion_suma> ::= <valor_aritmetico> ("+" | "-") <valor_aritmetico>
+
+    <operacion_multiplicacion> ::= <valor_aritmetico> ("*" | "/" | "//") <valor_aritmetico>
+
+    <operacion_modulo> ::= <valor_aritmetico> "mod" <valor_aritmetico> 
+
+    <operacion_aritmetica> ::= <operacion_potencia> | <operacion_suma> | <operacion_multiplicacion> | <operacion_modulo>
+
+    <expresion_aritmetica> ::= <operacion_aritmetica> | <valor_aritmetico>
+
+Operaciones relacionales: 
+    <operador_relacional> ::= "<" | ">" | "<=" | ">=" | "==" | "!="
+
+    <operando_relacional> ::= <abrir_corcheteCuadrados> (<expresion_aritmetica> | <valor>) <cerrar_corcheteCuadrados>
+
+    <operacion_relacional> ::= <operando_relacional> <operador_relacional> <operando_relacional>
+
+Expresiones logicas:
+    <condicion_basica> ::= <abrir_parentesis> <operacion_relacional> <cerrar_parentesis> | <abrir_parentesis> <bool> <cerrar_parentesis>
+
+    <condiciones_and> ::= <condicion_basica> "λ" <condicion_basica>
+
+    <condiciones_or> ::= <condicion_basica> "θ" <condicion_basica>
+
+    <condiciones_logicas> ::= <abrir_parentesis> (<condiciones_and> | <condiciones_or>) <cerrar_parentesis>
+
+    <negacion> ::= "Σ" (<condicion_basica> | <condiciones_logicas>)
+
+    <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
+
+Expresiones y funciones:
+    <expresion> ::= <expresion_aritmetica> | <operacion_relacional> | <expresion_logica> | <valor> | <llamada_funcion>
+
+    <lista_expresiones> ::= <expresion> | <expresion> "," <lista_expresiones>
+
+    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_expresiones> <cerrar_parentesis>
+
+Estructuras de control:
+    <if> ::= "if" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> <demas_if>
+
+    <demas_if> ::= <cadena_elif> <fin_if> | <fin_if>
+
+    <fin_if> ::= <else> | ε
+
+    <elif> ::= "elif" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <cadena_elif> ::= <elif> | <elif> <cadena_elif>
+
+    <else> ::= "else" <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <while> ::= "while" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <for> ::= "for" <abrir_parentesis> (<variable> "Ͱ" <valor> | <variable_numerica>) "»" <expresion> "»" (<incremento> | <decremento>) <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <estructura_control> ::= <if> | <while> | <for>
+
+Sentencias y bloques:
+    <instruccion> ::= <asignacion_variable> | <def_variable> | <def_var_global | <def_var_local | <estructura_control> | <comentario> | (<expresion> | <break> | <return>) "»"
+
+    <lista_instrucciones> ::= <instruccion> | <instruccion> <lista_instrucciones> 
+
+    <bloque> ::= <lista_instrucciones>
+
+    <break> ::= "break"
+
+    <return> ::= "return" | "return" <abrir_parentesis> (<expresion> | <variable>) <cerrar_parentesis>
+
+Parametros y funciones:
+    <parametro> ::= <tipo> <identificador>
+
+    <lista_parametros> ::= ε | <parametro> | <parametro> "," <lista_parametros>
+
+    <funcion> ::= "defun" <tipo> <identificador> <abrir_parentesis> <lista_parametros> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <lista_funciones> ::= ε | <funcion> | <funcion> <lista_funciones>
+
+    <main> ::= <lista_funciones> "defun" "main" <abrir_bloque> <bloque> <cerrar_bloque>
+
