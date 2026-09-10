@@ -130,9 +130,7 @@ Identificadores:
 
 Delimitadores:
     <abrir_bloque>                  
-    <cerrar_bloque>                
-    <fin_sentencia>                 (Final de una expresion es como el ;)
-    <coma>    
+    <cerrar_bloque>
     <abrir_parentesis>           
     <cerrar_parentesis>           
     <abrir_corcheteCuadrados>      (Abre un indice)
@@ -275,10 +273,6 @@ Delimitadores:
 
     <cerrar_bloque> ::= ":?"
 
-    <fin_sentencia> ::= "»"
-
-    <coma> ::= "\,"
-
     <abrir_parentesis> ::= "є:"
 
     <cerrar_parentesis> ::= ":э"
@@ -356,8 +350,10 @@ Operaciones aritmeticas:
 
 Operaciones relacionales: 
     <operador_relacional> ::= "<" | ">" | "<=" | ">=" | "==" | "!="
+    
+    <operando_relacional> ::= <abrir_corcheteCuadrados> (<expresion_aritmetica> | <valor>) <cerrar_corcheteCuadrados>
 
-    <operacion_relacional> ::= (<expresion_aritmetica> | <valor>) <operador_relacional> (<expresion_aritmetica> | <valor>)
+    <operacion_relacional> ::= <operando_relacional> <operador_relacional> <operando_relacional>
 
 Expresiones logicas:
     <condicion_basica> ::= <abrir_parentesis> <operacion_relacional> <cerrar_parentesis> | <abrir_parentesis> <bool> <cerrar_parentesis>
@@ -371,3 +367,10 @@ Expresiones logicas:
     <negacion> ::= "Σ" (<condicion_basica> |  <condiciones_logicas)
 
     <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
+
+Expresiones y funciones:
+    <expresion> ::= (<expresion_aritmetica> | <operacion_relacional> | <expresion_logica> | <valor>)
+
+    <lista_expresiones> ::= <expresion> | <expresion> "," <lista_expresiones>
+
+    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_instrucciones> <cerrar_parentesis>
