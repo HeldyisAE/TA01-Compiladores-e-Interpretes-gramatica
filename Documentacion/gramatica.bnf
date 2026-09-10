@@ -185,6 +185,7 @@ Expresiones logicas:
     <condicion_basica>              (Una condicion relacional o booleana)
     <condiciones_and>               (Condiciones unidas con λ)
     <condiciones_or>                (Condiciones unidas con θ)
+    <condiciones_logicas>           (Conjunto de condiciones logicas binarias)
     <negacion>                      (Negacion usando Σ)
     <expresion_logica>              (Expresion logica completa)
 
@@ -215,7 +216,7 @@ Parametros y funciones:
     <lista_parametros>         
     <funcion>                       (Define una funcion)
     <lista_funciones>             
-    <principal>                     (Procedimiento principal)
+    <main>                     (Procedimiento principal)
 
 
 ------------------- Producciones -------------------
@@ -358,3 +359,15 @@ Operaciones relacionales:
 
     <operacion_relacional> ::= (<expresion_aritmetica> | <valor>) <operador_relacional> (<expresion_aritmetica> | <valor>)
 
+Expresiones logicas:
+    <condicion_basica> ::= <abrir_parentesis> <operacion_relacional> <cerrar_parentesis> | <abrir_parentesis> <bool> <cerrar_parentesis>
+
+    <condiciones_and> ::= <condicion_basica> "λ" <condicion_basica>
+
+    <condiciones_or> ::= <condicion_basica> "θ" <condicion_basica>
+
+    <condiciones_logicas> ::= <abrir_parentesis> (<condiciones_and> | <condiciones_or>) <cerrar_parentesis>
+
+    <negacion> ::= "Σ" (<condicion_basica> |  <condiciones_logicas)
+
+    <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
