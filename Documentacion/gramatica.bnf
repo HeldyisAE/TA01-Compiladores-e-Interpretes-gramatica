@@ -9,8 +9,9 @@ Palabras reservadas:
     Procedimiento principal:
         "main"    (Procedimiento inicial del programa)
 
-    Variables y tipos de datos:
+    Variables, funciones y tipos de datos:
         "val"          (Creacion de variables)
+        "defun"        (Creacion de funcion)
         "int"          (Tipo entero)
         "float"        (Tipo flotante o decimal)
         "bool"         (Tipo booleano)
@@ -398,4 +399,15 @@ Sentencias y bloques:
     <break> ::= "break"
 
     <return> ::= "return" | "return" <abrir_parentesis> (<expresion> | <variable>) <cerrar_parentesis>
+
+Parametros y funciones:
+    <parametro> ::= <tipo> <identificador>
+
+    <lista_parametros> ::= ε | <parametro> | <parametro> "," <lista_parametros>
+
+    <funcion> ::= "defun" <tipo> <identificador> <abrir_parentesis> <lista_parametros> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <lista_funciones> ::= ε | <funcion> | <funcion> <lista_funciones>
+
+    <main> ::= <lista_funciones> "defun" "main" <abrir_bloque> <bloque> <cerrar_bloque>
 
