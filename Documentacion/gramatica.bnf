@@ -291,13 +291,13 @@ Delimitadores:
 Variables:
     <variable> ::= <identificador>
 
-    <def_variable> ::=  "val" <tipo> <identificador> "Ͱ" <valor> "»"
+    <def_variable> ::=  "val" <tipo> <identificador> ("»" | "Ͱ" <expresion> "»")
 
     <def_var_global> ::= "dg" <def_variable> 
 
     <def_var_local> ::= "dl" <def_variable> 
 
-    <asignacion_variable> ::= <variable> "Ͱ" <valor> "»"
+    <asignacion_variable> ::= <variable> "Ͱ" <expresion> "»"
 
     <variable_numerica> ::= <variable> 
 
@@ -388,5 +388,14 @@ Estructuras de control:
 
     <estructura_control> ::= <if> | <while> | <for>
 
+Sentencias y bloques:
+    <instruccion> ::= <asignacion_variable> | <def_variable> | <estructura_control> | (<expresion> | <break> | <return>) "»"
 
+    <lista_instrucciones> ::= <instruccion> | <instruccion> <lista_instrucciones> 
+
+    <bloque> ::= <lista_instrucciones>
+
+    <break> ::= "break"
+
+    <return> ::= "return" | "return" <abrir_parentesis> (<expresion> | <variable>) <cerrar_parentesis>
 
