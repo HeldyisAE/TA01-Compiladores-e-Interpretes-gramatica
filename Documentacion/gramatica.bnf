@@ -177,6 +177,10 @@ Operaciones aritmeticas:
     <operacion_aritmetica>      (Combinacion de valores y operaciones matematicas)
     <expresion_aritmetica>       (Operacion matematica completa)
 
+Operaciones relacionales:
+    <operador_relacional>           (Conjunto de operadores relacionales)
+    <operacion_relacional>
+
 Expresiones logicas:
     <condicion_basica>              (Una condicion relacional o booleana)
     <condiciones_and>               (Condiciones unidas con λ)
@@ -352,5 +356,5 @@ Operaciones aritmeticas:
 Operaciones relacionales: 
     <operador_relacional> ::= "<" | ">" | "<=" | ">=" | "==" | "!="
 
-    <operacion_relacional> ::= 
+    <operacion_relacional> ::= (<expresion_aritmetica> | <valor>) <operador_relacional> (<expresion_aritmetica> | <valor>)
 
