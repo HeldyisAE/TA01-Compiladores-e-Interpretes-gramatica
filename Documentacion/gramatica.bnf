@@ -250,15 +250,13 @@ Literales y tipos:
 
     <cadena_texto> ::= "\"" <texto> "\""
 
-    <caracter_literal> "\'" <caracter> "\'"
+    <caracter_literal> ::= "\'" <caracter> "\'"
 
     <valor_numerico> ::= <entero> | <flotante> 
 
     <valor> ::= <valor_numerico> |<exponencial>| <bool> | <caracter> | <cadena_texto>  | <identificador> | <caracter_literal>
     
-    <tipo> ::= "int" | "float" | "bool" | "char" | "string"
-
-    <tipo_funcion> ::= "int" | "float" | "bool" | "char"
+    <tipo> ::= "int" | "float" | "bool" | "char" | "string" | "void"
 
     <negativo> ::= "\-" <entero> | "\-" <flotante>
 
@@ -284,7 +282,7 @@ Delimitadores:
 
     <punto>::= "\."
 
-    <incremento> ::= <variable_numerica> "++" | 
+    <incremento> ::= <variable_numerica> "++" 
 
     <decremento> ::= <variable_numerica> "--"
 
@@ -317,7 +315,7 @@ Arreglos:
 
     <acceso_arreglo> ::= <arreglo> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados>
 
-    <creacion_arreglo> ::= "val" <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> "Ͱ" <lista_valores_arreglo> "»"
+    <creacion_arreglo> ::= "val" <tipo_arreglo> <identificador> <abrir_bloque> <indice> <cerrar_bloque> "Ͱ" <lista_valores_arreglo> "»"
 
     <declaracion_arreglo> ::= <creacion_arreglo>
 
@@ -335,7 +333,7 @@ Comentarios:
     <comentario> ::= <comentario_linea> | <comentario_multilinea>
 
 Operaciones aritmeticas:
-    <valor_aritmetico> ::= <valor_numerico> | <negativo> | <operacion_potencia> | <identificador> | <acceso_arreglo> | <llamada_funcion> | <abrir_parentesis> <expresion_aritmetica> <cerrar_parentesis>
+    <valor_aritmetico> ::= <valor_numerico> | <negativo> | <identificador> | <acceso_arreglo> | <llamada_funcion> | <abrir_parentesis> <expresion_aritmetica> <cerrar_parentesis>
 
     <operacion_potencia> ::= <valor_aritmetico> "pot" <valor_aritmetico>
 
@@ -365,7 +363,7 @@ Expresiones logicas:
 
     <condiciones_logicas> ::= <abrir_parentesis> (<condiciones_and> | <condiciones_or>) <cerrar_parentesis>
 
-    <negacion> ::= "Σ" (<condicion_basica> |  <condiciones_logicas)
+    <negacion> ::= "Σ" (<condicion_basica> | <condiciones_logicas>)
 
     <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
 
@@ -374,12 +372,18 @@ Expresiones y funciones:
 
     <lista_expresiones> ::= <expresion> | <expresion> "," <lista_expresiones>
 
-    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_instrucciones> <cerrar_parentesis>
+    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_expresiones> <cerrar_parentesis>
 
 Estructuras de control:
-    <if> ::= "if" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> | <if> (<elif> | <else>)
+    <if> ::= "if" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> <demas_if>
+
+    <demas_if> ::= <cadena_elif> <fin_if> | <fin_if>
+
+    <fin_if> ::= <else> | ε
 
     <elif> ::= "elif" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <cadena_elif> ::= <elif> | <elif> <cadena_elif>
 
     <else> ::= "else" <abrir_bloque> <bloque> <cerrar_bloque>
 
@@ -390,7 +394,7 @@ Estructuras de control:
     <estructura_control> ::= <if> | <while> | <for>
 
 Sentencias y bloques:
-    <instruccion> ::= <asignacion_variable> | <def_variable> | <estructura_control> | (<expresion> | <break> | <return>) "»"
+    <instruccion> ::= <asignacion_variable> | <def_variable> | <def_var_global | <def_var_local | <estructura_control> | <comentario> | (<expresion> | <break> | <return>) "»"
 
     <lista_instrucciones> ::= <instruccion> | <instruccion> <lista_instrucciones> 
 
