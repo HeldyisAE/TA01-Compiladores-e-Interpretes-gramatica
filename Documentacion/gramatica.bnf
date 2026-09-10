@@ -7,7 +7,7 @@
 Palabras reservadas:
 
     Procedimiento principal:
-        "principal"    (Procedimiento inicial del programa)
+        "main"    (Procedimiento inicial del programa)
 
     Variables y tipos de datos:
         "val"          (Creacion de variables)
@@ -168,11 +168,14 @@ Comentarios:
     <comentario_multilinea>
     <comentario>
 
-Operaciones matematicas:
-    <valor_matematico>            
-    <operacion_potencia>        
-    <operacion_matematica>      (Combinacion de valores y operaciones matematicas)
-    <expresion_matematica>       (Operacion matematica completa)
+Operaciones aritmeticas:
+    <valor_aritmetico>            
+    <operacion_potencia>
+    <operacion_suma>
+    <operacion_multiplicacion>
+    <operacion_modulo>
+    <operacion_aritmetica>      (Combinacion de valores y operaciones matematicas)
+    <expresion_aritmetica>       (Operacion matematica completa)
 
 Expresiones logicas:
     <condicion_basica>              (Una condicion relacional o booleana)
@@ -185,8 +188,6 @@ Expresiones y funciones:
     <expresion>                   
     <lista_expresiones>             
     <llamada_funcion>             
-
-
 
 Estructuras de control
     <estructura_control>        (Estructura que controla el flujo del programa)
@@ -283,7 +284,7 @@ Delimitadores:
 
     <punto>::= "\."
 
-    <incremento> ::= <variable_numerica> "++"
+    <incremento> ::= <variable_numerica> "++" | 
 
     <decremento> ::= <variable_numerica> "--"
 
@@ -332,3 +333,24 @@ Comentarios:
     <comentario_multilinea> ::= "¡" <texto> "!"
 
     <comentario> ::= <comentario_linea> | <comentario_multilinea>
+
+Operaciones aritmeticas:
+    <valor_aritmetico> ::= <valor_numerico> | <negativo> | <operacion_potencia> | <identificador> | <acceso_arreglo> | <llamada_funcion> | <abrir_parentesis> <expresion_aritmetica> <cerrar_parentesis>
+
+    <operacion_potencia> ::= <valor_aritmetico> "pot" <valor_aritmetico>
+
+    <operacion_suma> ::= <valor_aritmetico> ("+" | "-") <valor_aritmetico>
+
+    <operacion_multiplicacion> ::= <valor_aritmetico> ("*" | "/" | "//") <valor_aritmetico>
+
+    <operacion_modulo> ::= <valor_aritmetico> "mod" <valor_aritmetico> 
+
+    <operacion_aritmetica> ::= <operacion_potencia> | <operacion_suma> | <operacion_multiplicacion> | <operacion_modulo>
+
+    <expresion_aritmetica> ::= <operacion_aritmetica> | <valor_aritmetico>
+
+Operaciones relacionales: 
+    <operador_relacional> ::= "<" | ">" | "<=" | ">=" | "==" | "!="
+
+    <operacion_relacional> ::= 
+
