@@ -350,7 +350,7 @@ Operaciones aritmeticas:
 
 Operaciones relacionales: 
     <operador_relacional> ::= "<" | ">" | "<=" | ">=" | "==" | "!="
-    
+
     <operando_relacional> ::= <abrir_corcheteCuadrados> (<expresion_aritmetica> | <valor>) <cerrar_corcheteCuadrados>
 
     <operacion_relacional> ::= <operando_relacional> <operador_relacional> <operando_relacional>
@@ -369,8 +369,24 @@ Expresiones logicas:
     <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
 
 Expresiones y funciones:
-    <expresion> ::= (<expresion_aritmetica> | <operacion_relacional> | <expresion_logica> | <valor>)
+    <expresion> ::= <expresion_aritmetica> | <operacion_relacional> | <expresion_logica> | <valor> | <llamada_funcion>
 
     <lista_expresiones> ::= <expresion> | <expresion> "," <lista_expresiones>
 
     <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_instrucciones> <cerrar_parentesis>
+
+Estructuras de control:
+    <if> ::= "if" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> | <if> (<elif> | <else>)
+
+    <elif> ::= "elif" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <else> ::= "else" <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <while> ::= "while" <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <for> ::= "for" <abrir_parentesis> (<variable> "Ͱ" <valor> | <variable_numerica>) "»" <expresion> "»" (<incremento> | <decremento>) <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+
+    <estructura_control> ::= <if> | <while> | <for>
+
+
+
