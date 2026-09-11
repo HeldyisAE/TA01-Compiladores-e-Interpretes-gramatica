@@ -1,0 +1,8 @@
+Curso : Compiladores e intérpretes
+Semestre y año lectivo : II semestre 2026
+Estudiantes y carnet:
+Alice Arias Salazar | 2023104639 
+Heldyis Agüero Espinoza |   2023296812
+Número de tarea : Tarea #1
+Fecha de entrega : 11 de septiembre del 2026
+Estatus de la entrega : [MuyBuena]

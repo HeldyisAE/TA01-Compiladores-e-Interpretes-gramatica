@@ -16,5 +16,5 @@ Como parte del curso de Compiladores e interpretes se requiere la redacción y p
 
 - Fecha de entrega: 11 de noviembre de 2026
 
-- Estatus de entrega: *Pendiente*
+- Estatus de entrega: *[MuyBuena]*
   
