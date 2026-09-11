@@ -1,13 +1,10 @@
 ------------------ Simbolo inicial ------------------
-
 <programa>
-
 -------------------- Terminales --------------------
 
 Palabras reservadas
 
 Variables, funciones y tipos de datos
-
     "val"          (Creacion de variables)
     "defun"        (Creacion de funcion)
     "int"          
@@ -20,28 +17,20 @@ Variables, funciones y tipos de datos
     "false"        
     "dg"           (Variable global)
     "dl"           (Variable local)
-
-
 Estructuras condicionales
-
     "if"           
     "elif"         
     "else"         
-
 Ciclos y control de funciones
-
     "while"        
     "for"          
     "return"       
     "break"        
-
 Entrada y salida de datos
-
     "read"         (Lectura o entrada de datos)
     "write"        (Escritura o salida de datos)
 
 Operadores aritmeticos
-
     Binarios
         "+"           
         "-"           
@@ -50,47 +39,36 @@ Operadores aritmeticos
         "//"           (Division entera)
         "mod"          (Modulo)
         "pot"          (Potencia)
-
     Unarios
     "-"            (Negacion)
     "++"           (Incremento)
     "--"           (Decremento)
-
 Operadores relacionales
-
     "<"            
     ">"            
     "<="           
     ">="          
     "=="         
     "!="           
-
 Operadores logicos
-
     "λ"            (and)
     "θ"            (or)
     "Σ"            (not)
-
 Delimitadores y simbolos literales
-
     Bloques
         "¿:"           (Abre )
         ":?"           (Cierra )
-
 Parentesis
         "є:"           (Abre )
         ":э"           (Cierra )
-
 indices de arreglos
     "ʃ:"           (Inicia )
     ":ʅ"           (Cierra )
-
 Otros
     "»"            (Final de expresion)
     "Ͱ"            (Asignacion)
     ","            (Separador para parametros de funcion)
     "."            (Punto decimal)
-
 Comentarios
     "|"            (Comentario de linea)
     "¡"            (Abre comentario multilinea)
@@ -99,13 +77,11 @@ Comentarios
 Digitos
     "0" "1" "2" "3" "4" "5" "6" "7" "8" "9"
 Letras
-    "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z"
-    "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M""N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"
+    "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z""A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M""N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z"
 
 ------------------- No Terminales -------------------
 
 Caracteres y texto
-
     <letra>
     <digito>
     <digito_no_cero>
@@ -121,7 +97,6 @@ Caracteres y texto
     <guionBajo>
 
 Literales y tipos
-
     <entero>
     <lista_digitos_no_cero_final>
     <flotante>
@@ -148,7 +123,6 @@ Literales y tipos
     <resto_id>
 
 Delimitadores
-
     <abrir_bloque>
     <cerrar_bloque>
     <abrir_parentesis>
@@ -162,7 +136,6 @@ Delimitadores
     <decremento>
 
 Palabras reservadas y operadores
-
     <palabraVal>
     <palabraBreak>
     <palabraReturn>
@@ -183,29 +156,24 @@ Palabras reservadas y operadores
     <vacio>
 
 Operadores
-
     <simboloComentarioLinea>
     <simboloInicioComentario>
     <simboloFinComentario>
-
     <simboloSuma>
     <simboloResta>
     <simboloMultiplicacion>
     <simboloDivision>
     <simboloDivisionEntera>
-
     <simboloMenor>
     <simboloMayor>
     <simboloMenorIgual>
     <simboloMayorIgual>
     <simboloIgual>
     <simboloDiferente>
-
     <simboloAnd>
     <simboloOr>
 
 Variables
-
     <variable>
     <def_variable>
     <def_var_global>
@@ -214,7 +182,6 @@ Variables
     <variable_numerica>
 
 Entrada y salida
-
     <lectura>
     <escritura>
     <valor_escritura>
@@ -235,13 +202,11 @@ Arreglos
     <tipo_arreglo>
 
 Comentarios
-
     <comentario_linea>
     <comentario_multilinea>
     <comentario>
 
 Operaciones aritmEticas
-
     <valor_aritmetico>
     <expresion_potencia>
     <expresion_suma>
@@ -252,13 +217,11 @@ Operaciones aritmEticas
     <operador_multiplicacion>
 
 Operaciones relacionales
-
     <operadorRelacional>
     <operando_relacional>
     <operacion_relacional>
 
 Expresiones lOgicas
-
     <condicion_basica>
     <condiciones_and>
     <condiciones_or>
@@ -267,13 +230,11 @@ Expresiones lOgicas
     <expresion_logica>
 
 Expresiones y funciones
-
     <expresion>
     <lista_expresiones>
     <llamada_funcion>
 
 Estructuras de control
-
     <if>
     <demas_if>
     <fin_if>
@@ -285,7 +246,6 @@ Estructuras de control
     <estructura_control>
 
 Sentencias y bloques
-
     <instruccion>
     <lista_instrucciones>
     <bloque>
@@ -293,333 +253,196 @@ Sentencias y bloques
     <return>
 
 Parametros y funciones
-
     <parametro>
     <lista_parametros>
     <funcion>
     <lista_funciones>
     <principal>
-
     <tipo_funcion>
 
 
 ------------------- Producciones -------------------
-Caracteres y texto: 
-
-
+Caracteres y texto
     <letra> ::= [a-zA-Z]
-
     <digito> ::= [0-9]
-
     <digito_no_cero> ::= [1-9]
-
+    <cero> ::= "0"
     <lista_digitos> ::= <digito> | <digito> <lista_digitos>
-
-    <caracter>::= <letra> | <digito> | <simbolo>
-
+    <simbolo> ::= "\@" | "\#" | "\$" | "\%" | "\^" | "\&" | "\*" | "\(" | "\)" | "\-" | "\_" | "\=" | "\+" | "\[" | "\]" | "\{" | "\}" | "\;" | "\:" | "\'" | "\<" | "\>" | "\," | "\." | "\/" | "\?" | "\\" | "\`" | "\~"
+    <caracter> ::= <letra> | <digito> | <simbolo>
     <texto> ::= <caracter> | <caracter> <texto>
-
-    <simbolo> ::=   "\@" | "\#" | "\$" | "\%"  | "\^" | "\&" | "\*" | "\(" | "\)" | "\-" | "\_" | "\=" | "\+"  | "\[" | "\]" | "\{" | "\}" | "\;" | "\:" | "\'" | "\<" | "\>"  | "\," | "\." | "\/" | "\?"  | "\\" | "\`" | "\~"
-
-    <cero>::= "0"
-
     <punto> ::= "\."
-
-    <operadorExponencial> ::= "E" | "e" 
-
+    <operadorExponencial> ::= "E" | "e"
     <comillaDoble> ::= "\""
-
     <comillaSimple> ::= "\'"
+    <guionBajo> ::= "\_"
 
+Tipos y valores
     <tipoInt> ::= "int"
-
     <tipoFloat> ::= "float"
-
     <tipoBool> ::= "bool"
-
     <tipoChar> ::= "char"
-
     <tipoString> ::= "string"
-
     <tipoVoid> ::= "void"
-
+    <true> ::= "true"
+    <false> ::= "false"
     <negativoNumero> ::= "\-"
-
-    <true>::= "true" 
-
-    <false>::= "false"
-
-    <guionBajo>::= "\_"
-
-    
-Delimitadores:
-    <abrir_bloque> ::= "¿:"
-
-    <cerrar_bloque> ::= ":?"
-
-    <abrir_parentesis> ::= "є:"
-
-    <cerrar_parentesis> ::= ":э"
-
-    <abrir_corcheteCuadrados> ::= "ʃ:"
-
-    <cerrar_corcheteCuadrados> ::= ":ʅ"
-
-    <punto>::= "\."
-
-    <coma>::= ","
-
-    <incremento> ::= <variable_numerica> "++" 
-
-    <decremento> ::= <variable_numerica> "--"
-
-    <fin_sentencia> ::= "»"
-
-    <asignacion> ::= "Ͱ"
-
-    <palabraBreak> ::= "break"
-
-<palabraReturn> ::= "return"
-
-<palabraDefun> ::= "defun"
-
-<palabraPrincipal> ::= "principal"
-
-    <operadorPotencia>::= "pot" 
-
-Literales y tipos:
-    <entero> ::= <cero> | <digito_no_cero> <lista_digitos>
-
-    <flotante> ::= <cero> <punto> <cero>|<cero> <punto>  <lista_digitos_no_cero_final>   | <digito_no_cero> <lista_digitos> <punto> <lista_digitos_no_cero_final>
-
-    <lista_digitos_no_cero_final> ::= <digito_no_cero>  | <digito> <lista_digitos_no_cero_final>
-
-    <exponencial> ::= <entero> <operadorExponencial><entero>  
-
-    <fraccion> ::= <punto>  <lista_digitos>
-
-    <bool> ::= <true>| <false>
-
-    <cadena_texto> ::= <comillaDoble>  <texto> <comillaDoble> ("Hola mundo")
-
-    <caracter_literal> ::= <comillaSimple> <caracter> <comillaSimple> ("'A'")
-
-    <valor_numerico> ::= <entero> | <flotante> 
-
-    <valor> ::= <valor_numerico> |<exponencial>| <bool> | <caracter> | <cadena_texto>  | <identificador> | <caracter_literal>
-    
-    <tipo> ::= <tipoInt> | <tipoFloat>  | <tipoBool> | <tipoChar>  | <tipoString>  
-
-
-    <negativo> ::= <negativoNumero> <entero> | <negativoNumero> <flotante>
-
     <not> ::= "Σ"
-
     <palabraVal> ::= "val"
-
-    <leer> ::= "read" 
+    <leer> ::= "read"
     <escribir> ::= "write"
-    <varGlobal>::="dg" 
-    <varLocal>::="dl" 
-    <vacio>::= ε
+    <varGlobal> ::= "dg"
+    <varLocal> ::= "dl"
+    <vacio> ::= ε
+
+Delimitadores y operadores
+    <abrir_bloque> ::= "¿:"
+    <cerrar_bloque> ::= ":?"
+    <abrir_parentesis> ::= "є:"
+    <cerrar_parentesis> ::= ":э"
+    <abrir_corcheteCuadrados> ::= "ʃ:"
+    <cerrar_corcheteCuadrados> ::= ":ʅ"
+    <punto> ::= "\."
+    <coma> ::= ","
+    <fin_sentencia> ::= "»"
+    <asignacion> ::= "Ͱ"
+    <palabraBreak> ::= "break"
+    <palabraReturn> ::= "return"
+    <palabraDefun> ::= "defun"
+    <palabraPrincipal> ::= "principal"
+    <operadorPotencia> ::= "pot"
+
+Palabras y operadores
     <simboloComentarioLinea> ::= "|"
     <simboloInicioComentario> ::= "¡"
+    <simboloFinComentario> ::= "!"
+    <simboloSuma> ::= "+"
+    <simboloResta> ::= "-"
+    <simboloMultiplicacion> ::= "*"
+    <simboloDivision> ::= "/"
+    <simboloDivisionEntera> ::= "//"
+    <simboloMenor> ::= "<"
+    <simboloMayor> ::= ">"
+    <simboloMenorIgual> ::= "<="
+    <simboloMayorIgual> ::= ">="
+    <simboloIgual> ::= "=="
+    <simboloDiferente> ::= "!="
+    <simboloAnd> ::= "λ"
+    <simboloOr> ::= "θ"
+    <palabraIf> ::= "if"
+    <palabraElif> ::= "elif"
+    <palabraElse> ::= "else"
+    <palabraWhile> ::= "while"
+    <palabraFor> ::= "for"
+    <modulo> ::= "mod"
+    <palabraDefun> ::= "defun"
+    <palabraPrincipal> ::= "main"
+    <tipoVoid> ::= "void"
 
-<simboloFinComentario> ::= "!"
-<simboloSuma> ::= "+"
+Literales
+    <entero> ::= <cero> | <digito_no_cero> <lista_digitos>
+    <lista_digitos_no_cero_final> ::= <digito_no_cero> | <digito> <lista_digitos_no_cero_final>
+    <flotante> ::= <cero> <punto> <cero> | <cero> <punto> <lista_digitos_no_cero_final> | <digito_no_cero> <lista_digitos> <punto> <lista_digitos_no_cero_final>
+    <exponencial> ::= <entero> <operadorExponencial> <entero>
+    <fraccion> ::= <punto> <lista_digitos>
+    <bool> ::= <true> | <false>
+    <cadena_texto> ::= <comillaDoble> <texto> <comillaDoble> 
+    <caracter_literal> ::= <comillaSimple> <caracter> <comillaSimple> 
+    <valor_numerico> ::= <entero> | <flotante>
+    <valor> ::= <valor_numerico> | <exponencial> | <bool> | <caracter> | <cadena_texto> | <identificador> | <caracter_literal>
+    <tipo> ::= <tipoInt> | <tipoFloat> | <tipoBool> | <tipoChar> | <tipoString>
+    <negativo> ::= <negativoNumero> <entero> | <negativoNumero> <flotante>
 
-<simboloResta> ::= "-"
-<simboloMultiplicacion> ::= "*"
-
-<simboloDivision> ::= "/"
-
-<simboloDivisionEntera> ::= "//"
-<simboloMenor> ::= "<"
-
-<simboloMayor> ::= ">"
-
-<simboloMenorIgual> ::= "<="
-
-<simboloMayorIgual> ::= ">="
-
-<simboloIgual> ::= "=="
-
-<simboloDiferente> ::= "!="
-<simboloAnd> ::= "λ"
-
-<simboloOr> ::= "θ"
-<palabraIf> ::= "if"
-
-<palabraElif> ::= "elif"
-
-<palabraElse> ::= "else"
-
-<palabraWhile> ::= "while"
-
-<palabraFor> ::= "for"
-<modulo>::= "mod"
-
-<palabraDefun> ::= "defun"
-
-<palabraPrincipal> ::= "main"
-<tipoVoid> ::= "void"
-
-
-Identificadores:
+Identificadores
     <identificador> ::= <letra> | <letra> <resto_id>
+    <resto_id> ::= <letra> | <digito> | <letra> <resto_id> | <digito> <resto_id> | <guionBajo> <letra> | <guionBajo> <digito> | <guionBajo> <letra> <resto_id> | <guionBajo> <digito> <resto_id>
 
-    <resto_id> ::= <letra> | <digito>  | <letra> <resto_id>  | <digito> <resto_id>|  <guionBajo><letra> |  <guionBajo><digito> |  <guionBajo> <letra> <resto_id>  |  <guionBajo><digito> <resto_id>
-
-
-Variables:
-
+Variables
     <variable> ::= <identificador>
+    <def_variable> ::= <palabraVal> <tipo> <identificador> (<fin_sentencia> | <asignacion> <expresion> <fin_sentencia>) 
+    <def_var_global> ::= <varGlobal> <def_variable> 
+    <def_var_local> ::= <varLocal> <def_variable> 
+    <asignacion_variable> ::= <variable> <asignacion> <expresion> <fin_sentencia> 
+    <variable_numerica> ::= <variable>
 
-    <def_variable> ::=  <palabraVal> <tipo> <identificador> (<fin_sentencia> | <asignacion> <expresion> <fin_sentencia>) ("val int edad » o val int edad Ͱ 20 »")
-
-    <def_var_global> ::=<varGlobal><def_variable> ("dg val int contador Ͱ 0 »")
-
-    <def_var_local> ::= <varLocal><def_variable> ("dl val int edad Ͱ 20 »")
-
-    <asignacion_variable> ::= <variable> <asignacion> <expresion> <fin_sentencia> ("edad Ͱ 25 »")
-
-    <variable_numerica> ::= <variable> 
-
-Entrada y salida:
-
+Entrada y salida
     <lectura> ::= <leer> <variable> <fin_sentencia>
-
     <escritura> ::= <escribir> <valor_escritura> <fin_sentencia>
+    <valor_escritura> ::= <entero> | <flotante> | <bool> | <cadena_texto> | <variable>
 
-    <valor_escritura> ::= <entero>   | <flotante> | <bool>   | <cadena_texto> | <variable>
-
-Arreglos:
-
-    <indice> ::= <entero> 
-
-    <arreglo> ::= <identificador> 
-
+Arreglos
+    <indice> ::= <entero>
+    <arreglo> ::= <identificador>
     <acceso_arreglo> ::= <arreglo> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> ("arr ʃ:2:ʅ")
-
-    <declaracion_arreglo> ::= <creacion_arreglo> 
-
+    <declaracion_arreglo> ::= <creacion_arreglo>
     <creacion_arreglo> ::= <arreglo_con_tamano> ("val int arr ʃ:3:ʅ »")
-    
     <creacion_arreglo> ::= <arreglo_con_tamano_valores> ("val int arr ʃ:2:ʅ Ͱ ¿:2,3:? »")
-    
-    <creacion_arreglo> ::= <arreglo_sin_tamano_valores>("val int arr ʃ::ʅ Ͱ ¿:1,2,3:? »")
-
-    <arreglo_con_tamano> ::= <palabraVal>  <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> <fin_sentencia>
-    
-    <arreglo_con_tamano_valores> ::= <palabraVal>  <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> <asignacion><abrir_bloque> <lista_arreglo> <cerrar_bloque> <fin_sentencia>
-    
-    <arreglo_sin_tamano_valores> ::= <palabraVal>  <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <cerrar_corcheteCuadrados> <asignacion>   <abrir_bloque> <lista_arreglo> <cerrar_bloque> <fin_sentencia>
-
+    <creacion_arreglo> ::= <arreglo_sin_tamano_valores> ("val int arr ʃ::ʅ Ͱ ¿:1,2,3:? »")
+    <arreglo_con_tamano> ::= <palabraVal> <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> <fin_sentencia>
+    <arreglo_con_tamano_valores> ::= <palabraVal> <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <indice> <cerrar_corcheteCuadrados> <asignacion> <abrir_bloque> <lista_arreglo> <cerrar_bloque> <fin_sentencia>
+    <arreglo_sin_tamano_valores> ::= <palabraVal> <tipo_arreglo> <identificador> <abrir_corcheteCuadrados> <cerrar_corcheteCuadrados> <asignacion> <abrir_bloque> <lista_arreglo> <cerrar_bloque> <fin_sentencia>
     <lista_arreglo> ::= <inicio_lista_arreglo>
-
     <inicio_lista_arreglo> ::= <valor_numerico> <continuacion_lista_arreglo>
-
-    <continuacion_lista_arreglo> ::= <coma> <valor_numerico> <continuacion_lista_arreglo> |  <vacio>
-
-    <modificacion_arreglo> ::= <acceso_arreglo> <asignacion>  <valor_numerico> <fin_sentencia> ("  arr ʃ:1:ʅ Ͱ 8 »")
-
-    <tipo_arreglo> ::= <tipoInt> 
-
+    <continuacion_lista_arreglo> ::= <coma> <valor_numerico> <continuacion_lista_arreglo> | <vacio>
+    <modificacion_arreglo> ::= <acceso_arreglo> <asignacion> <valor_numerico> <fin_sentencia> ("arr ʃ:1:ʅ Ͱ 8 »")
+    <tipo_arreglo> ::= <tipoInt>
     <tipo_arreglo> ::= <tipoFloat>
 
-Comentarios:
-    <comentario_linea> ::= <simboloComentarioLinea>  <texto>
-
-    <comentario_multilinea> ::= <simboloInicioComentario> <texto> <simboloFinComentario> 
-
+Comentarios
+    <comentario_linea> ::= <simboloComentarioLinea> <texto>
+    <comentario_multilinea> ::= <simboloInicioComentario> <texto> <simboloFinComentario>
     <comentario> ::= <comentario_linea> | <comentario_multilinea>
 
-Operaciones aritmeticas:
+Operaciones aritmeticas
     <valor_aritmetico> ::= <valor_numerico> | <negativo> | <identificador> | <acceso_arreglo> | <llamada_funcion> | <abrir_parentesis> <expresion_aritmetica> <cerrar_parentesis>
-
+    <expresion_potencia> ::= <valor_aritmetico> <operadorPotencia> <expresion_potencia> | <valor_aritmetico>
+    <expresion_suma> ::= <expresion_suma> <operador_suma> <expresion_potencia> | <expresion_potencia>
+    <expresion_multiplicacion> ::= <expresion_multiplicacion> <operador_multiplicacion> <expresion_suma> | <expresion_suma>
+    <expresion_modulo> ::= <expresion_modulo> <modulo> <expresion_multiplicacion> | <expresion_multiplicacion>
     <expresion_aritmetica> ::= <expresion_modulo>
-
-    <expresion_modulo> ::= <expresion_modulo> <modulo> <expresion_multiplicacion>     | <expresion_multiplicacion>
-
-    <expresion_multiplicacion> ::= <expresion_multiplicacion> <operador_multiplicacion> <expresion_suma>   | <expresion_suma>
-
-    <expresion_suma> ::= <expresion_suma> <operador_suma> <expresion_potencia>      | <expresion_potencia>
-
-    <expresion_potencia> ::= <valor_aritmetico> <operadorPotencia> <expresion_potencia>  | <valor_aritmetico>
-
     <operador_suma> ::= <simboloSuma> | <simboloResta>
+    <operador_multiplicacion> ::= <simboloMultiplicacion> | <simboloDivision> | <simboloDivisionEntera>
 
-    <operador_multiplicacion> ::= <simboloMultiplicacion>  | <simboloDivision>    | <simboloDivisionEntera>
-
-
-Operaciones relacionales: 
-    <operadorRelacional> ::= <simboloMenor>  | <simboloMayor>  | <simboloMenorIgual>  | <simboloMayorIgual>    | <simboloIgual>  | <simboloDiferente>
-
+Operaciones relacionales
+    <operadorRelacional> ::= <simboloMenor> | <simboloMayor> | <simboloMenorIgual> | <simboloMayorIgual> | <simboloIgual> | <simboloDiferente>
     <operando_relacional> ::= <abrir_corcheteCuadrados> (<expresion_aritmetica> | <valor>) <cerrar_corcheteCuadrados>
-
     <operacion_relacional> ::= <operando_relacional> <operador_relacional> <operando_relacional>
 
-Expresiones logicas:
-    <condicion_basica> ::= <abrir_parentesis> <operacion_relacional> <cerrar_parentesis> | <abrir_parentesis> <bool> <cerrar_parentesis>("є: ʃ:edad:ʅ > ʃ:18:ʅ :э")
-
-    <condiciones_and> ::= <condicion_basica> <simboloAnd>  <condicion_basica>("є: ʃ:edad:ʅ > ʃ:18:ʅ :э λ є: ʃ:edad:ʅ < ʃ:65:ʅ :э")
-
+Expresiones lg  
+    <condicion_basica> ::= <abrir_parentesis> <operacion_relacional> <cerrar_parentesis> | <abrir_parentesis> <bool> <cerrar_parentesis> ("є: ʃ:edad:ʅ > ʃ:18:ʅ :э")
+    <condiciones_and> ::= <condicion_basica> <simboloAnd> <condicion_basica> ("є: ʃ:edad:ʅ > ʃ:18:ʅ :э λ є: ʃ:edad:ʅ < ʃ:65:ʅ :э")
     <condiciones_or> ::= <condicion_basica> <simboloOr> <condicion_basica>
-
     <condiciones_logicas> ::= <abrir_parentesis> (<condiciones_and> | <condiciones_or>) <cerrar_parentesis> ("є: є: ʃ:edad:ʅ > ʃ:18:ʅ :э λ є: ʃ:edad:ʅ < ʃ:65:ʅ :э :э")
-
-    <negacion> ::= <not> (<condicion_basica> | <condiciones_logicas>)("Σ є: ʃ:edad:ʅ > ʃ:18:ʅ :э")
-
+    <negacion> ::= <not> (<condicion_basica> | <condiciones_logicas>) 
     <expresion_logica> ::= <condiciones_and> | <condiciones_or> | <negacion>
 
-Expresiones y funciones:
+Expresiones y funciones
     <expresion> ::= <expresion_aritmetica> | <operacion_relacional> | <expresion_logica> | <valor> | <llamada_funcion>
-
     <lista_expresiones> ::= <expresion> | <expresion> <coma> <lista_expresiones>
+    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_expresiones> <cerrar_parentesis> 
 
-    <llamada_funcion> ::= <identificador> <abrir_parentesis> <lista_expresiones> <cerrar_parentesis> ("sumar є:5,10:э")
-
-Estructuras de control:
-    <if> ::= <palabraIf> <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> <demas_if>("if є: ʃ:edad:ʅ > ʃ:18:ʅ :э ¿: bloque :?")
-
+Estructuras de control
+    <if> ::= <palabraIf> <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> <demas_if> 
     <demas_if> ::= <cadena_elif> <fin_if> | <fin_if>
-
     <fin_if> ::= <else> | <vacio>
-
     <elif> ::= <palabraElif> <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
-
     <cadena_elif> ::= <elif> | <elif> <cadena_elif>
-
-    <else> ::= <palabraElse> <abrir_bloque> <bloque> <cerrar_bloque><fin_sentencia>
-
+    <else> ::= <palabraElse> <abrir_bloque> <bloque> <cerrar_bloque> <fin_sentencia>
     <while> ::= <palabraWhile> <abrir_parentesis> <expresion> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
-
-    <for> ::= <palabraFor> <abrir_parentesis> (<variable> <asignacion>  <valor> | <variable_numerica>) <fin_sentencia> <expresion> <fin_sentencia> (<incremento> | <decremento>) <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> ("")
-
+    <for> ::= <palabraFor> <abrir_parentesis> (<variable> <asignacion> <valor> | <variable_numerica>) <fin_sentencia> <expresion> <fin_sentencia> (<incremento> | <decremento>) <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> ("")
     <estructura_control> ::= <if> | <while> | <for>
 
-Sentencias y bloques:
-    <instruccion> ::= <asignacion_variable> | <def_variable> | <def_var_global>  | <def_var_local | <estructura_control> | <comentario> | (<expresion> | <break> | <return>)<fin_sentencia>
-
-    <lista_instrucciones> ::= <instruccion> | <instruccion> <lista_instrucciones> 
-
+Sentencias y bloques
+    <instruccion> ::= <asignacion_variable> | <def_variable> | <def_var_global> | <def_var_local> | <estructura_control> | <comentario> | (<expresion> | <break> | <return>) <fin_sentencia>
+    <lista_instrucciones> ::= <instruccion> | <instruccion> <lista_instrucciones>
     <bloque> ::= <lista_instrucciones>
+    <break> ::= <palabraBreak> <fin_sentencia>
+    <return> ::= <palabraReturn> | <palabraReturn> <abrir_parentesis> (<expresion> | <variable>) <cerrar_parentesis> <fin_sentencia>
 
-    <break> ::=<palabraBreak> <fin_sentencia>
-
-    <return> ::= <palabraReturn>  | <palabraReturn> <abrir_parentesis> (<expresion> | <variable>) <cerrar_parentesis><fin_sentencia>
-
-
-Parametros y funciones:
-
+Parametros y funciones
     <parametro> ::= <tipo> <identificador>
-
-    <lista_parametros> ::= <vacio>   | <parametro>  | <parametro> <coma> <lista_parametros>
-
-    <funcion> ::= <palabraDefun> <tipo_funcion> <identificador>  <abrir_parentesis> <lista_parametros> <cerrar_parentesis>   <abrir_bloque> <bloque> <cerrar_bloque>
-
-    <lista_funciones> ::= <vacio> | <funcion>   | <funcion> <lista_funciones>
-
-    <principal> ::= <tipoVoid>  <palabraPrincipal>  <abrir_parentesis> <cerrar_parentesis> <abrir_bloque>  <bloque> <cerrar_bloque>  <fin_sentencia>
-
+    <lista_parametros> ::= <vacio> | <parametro> | <parametro> <coma> <lista_parametros>
+    <funcion> ::= <palabraDefun> <tipo_funcion> <identificador> <abrir_parentesis> <lista_parametros> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque>
+    <lista_funciones> ::= <vacio> | <funcion> | <funcion> <lista_funciones>
+    <principal> ::= <tipoVoid> <palabraPrincipal> <abrir_parentesis> <cerrar_parentesis> <abrir_bloque> <bloque> <cerrar_bloque> <fin_sentencia>
     <programa> ::= <lista_funciones> <principal>
