@@ -309,7 +309,6 @@ Delimitadores y operadores
     <palabraBreak> ::= "break"
     <palabraReturn> ::= "return"
     <palabraDefun> ::= "defun"
-    <palabraPrincipal> ::= "principal"
     <operadorPotencia> ::= "pot"
 
 Palabras y operadores
@@ -336,7 +335,7 @@ Palabras y operadores
     <palabraFor> ::= "for"
     <modulo> ::= "mod"
     <palabraDefun> ::= "defun"
-    <palabraPrincipal> ::= "main"
+    <palabraPrincipal> ::= "principal" ("main")
     <tipoVoid> ::= "void"
 
 Literales
